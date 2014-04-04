@@ -96,6 +96,13 @@
 	},
 	"file_history":
 	[
+		"/home/adrian/adrian/closopv2/app/config/database.php",
+		"/home/adrian/adrian/closopv2/bootstrap/autoload.php",
+		"/home/adrian/.config/sublime-text-3/Packages/Default/Preferences.sublime-settings",
+		"/home/adrian/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
+		"/home/adrian/.config/sublime-text-3/Packages/User/JSON.sublime-settings",
+		"/home/adrian/adrian/closopv2/app/views/hello.php",
+		"/home/adrian/adrian/closopv2/closopv2.sublime-project",
 		"/home/adrian/adrian/closop/app/views/hello.php",
 		"/home/adrian/adrian/closop/app/config/app.php",
 		"/home/adrian/adrian/closop/app/config/session.php",
@@ -216,18 +223,11 @@
 		"/home/adrian/adrian/fairsens/www_v2/controllers/admin/AdminTabsController.php",
 		"/home/adrian/adrian/fairsens/www_v2/themes/default/mobile/authentication-create-account.tpl",
 		"/home/adrian/adrian/fairsens/www_v2/admin/themes/default/template/controllers/attachments/list_action_delete.tpl",
-		"/home/adrian/adrian/fairsens/www_v2/admin/themes/default/template/helpers/list/list_action_supplier_order_receipt.tpl",
-		"/home/adrian/adrian/fairsens/www_v2/admin/themes/default/template/controllers/orders/_product_line.tpl",
-		"/home/adrian/adrian/fairsens/www_v2/admin/themes/default/template/controllers/attributes/helpers/list/list_content.tpl",
-		"/home/adrian/adrian/fairsens/www_v2/themes/default/order-address-product-line.tpl",
-		"/home/adrian/adrian/fairsens/www_v2/modules/dsibannerhome/dsibannerhome.php",
-		"/home/adrian/adrian/fairsens/www_v2/modules/askforaquote/frontoffice/myquotes.tpl",
-		"/home/adrian/adrian/fairsens/www_v2/themes/fairsensv2/catalogue-form.tpl",
-		"/home/adrian/adrian/fairsens/www_v2/admin/themes/default/template/controllers/products/specific_prices_shop_update.tpl"
+		"/home/adrian/adrian/fairsens/www_v2/admin/themes/default/template/helpers/list/list_action_supplier_order_receipt.tpl"
 	],
 	"find":
 	{
-		"height": 35.0
+		"height": 52.0
 	},
 	"find_in_files":
 	{
@@ -273,6 +273,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"\n",
 			"public",
 			"wood2.jpg",
 			"infosupl\n",
