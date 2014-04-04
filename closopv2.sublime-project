@@ -1,0 +1,22 @@
+{
+	"folders":
+	[
+		{
+			"follow_symlinks": true,
+			"path": ".",
+			"name": "trunk"
+		},
+		{
+			"follow_symlinks": true,
+			"path": "app",
+			"name": "logic"
+
+		}
+	],
+	"settings":
+	{
+		"tab_size": 2,
+		"convert_tabs_to_spaces": true
+	}
+}
+
