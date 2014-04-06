@@ -8,6 +8,7 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 	public $errors;
 	protected $fillable = array('user','email', 'full_name', 'password','fullname','address','rank');
 	protected $primaryKey = 'id_user';
+	protected $perPage = 2;
 	/**
 	 * The database table used by the model.
 	 *
