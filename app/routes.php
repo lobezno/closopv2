@@ -22,3 +22,9 @@ Route::get('testo', function()
 });
 
 Route::resource('admin/users', 'Admin_UsersController');
+
+Route::get('hola', function()
+{
+	$foo = 'holita';
+	return $foo;
+});
