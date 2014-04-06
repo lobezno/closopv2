@@ -62,7 +62,15 @@ class Admin_UsersController extends \BaseController {
 	public function show($id)
 	{
 		$user = User::find($id);
-		return View::make('admin/users/profile')->with('user',$user);
+		if (is_null($user)) 
+		{
+			App::abort(404);
+		}
+		else
+		{
+			return View::make('admin/users/profile')->with('user',$user);	
+		}
+		
 
 	}
 
@@ -74,7 +82,12 @@ class Admin_UsersController extends \BaseController {
 	 */
 	public function edit($id)
 	{
-		//
+		$user = User::find($id);
+		if (is_null ($user))
+		{
+		App::abort(404);
+		}
+		return View::make('admin/users/form')->with('user', $user);
 	}
 
 	/**
