@@ -40,7 +40,7 @@ class Admin_UsersController extends \BaseController {
 	 */
 	public function show($id)
 	{
-		//
+		return View::make('admin/users/list');
 	}
 
 	/**

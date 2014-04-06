@@ -20,3 +20,5 @@ Route::get('/testo', function()
 {
  	  return View::make('testo');
 });
+
+Route::resource('admin/users', 'Admin_UsersController');
