@@ -67,7 +67,7 @@
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 392.0,
+		"height": 54.0,
 		"selected_items":
 		[
 			[
@@ -75,15 +75,11 @@
 				"Package Control: Install Package"
 			]
 		],
-		"width": 521.0
+		"width": 449.0
 	},
 	"console":
 	{
-		"height": 146.0,
-		"history":
-		[
-			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by) "
-		]
+		"height": 146.0
 	},
 	"distraction_free":
 	{
@@ -96,6 +92,14 @@
 	},
 	"file_history":
 	[
+		"/home/adr/webs/closopv2/app/controllers/admin/UserController.php",
+		"/home/adr/webs/closopv2/app/routes.php",
+		"/home/adr/webs/closopv2/app/views/admin/users/form.blade.php",
+		"/home/adr/webs/closopv2/app/views/hello.php",
+		"/home/adr/webs/closopv2/app/views/admin/layout.blade.php",
+		"/home/adr/webs/closopv2/app/views/admin/users/list.blade.php",
+		"/home/adr/webs/closopv2/app/views/testo.php",
+		"/home/adr/webs/closopbackup/app/controllers/admin/UsersController.php",
 		"/home/adrian/adrian/closopv2/app/config/database.php",
 		"/home/adrian/adrian/closopv2/bootstrap/autoload.php",
 		"/home/adrian/.config/sublime-text-3/Packages/Default/Preferences.sublime-settings",
@@ -215,15 +219,7 @@
 		"/home/adrian/adrian/fairsens/www_v2/classes/order/OrderState.php",
 		"/home/adrian/adrian/fairsens/www_v2/classes/ProductSupplier.php",
 		"/home/adrian/adrian/fairsens/www_v2/admin/themes/default/template/controllers/carrier_wizard/summary.tpl",
-		"/home/adrian/adrian/fairsens/www_v2/classes/stock/StockManagerModule.php",
-		"/home/adrian/adrian/fairsens/www_v2/modules/statsbestcustomers/statsbestcustomers.php",
-		"/home/adrian/adrian/fairsens/www_v2/mails/fr/demandedevis-ack.html",
-		"/home/adrian/adrian/fairsens/www_v2/modules/dateofdelivery/dateofdelivery.php",
-		"/home/adrian/adrian/fairsens/www_v2/tools/tcpdf/datamatrix.php",
-		"/home/adrian/adrian/fairsens/www_v2/controllers/admin/AdminTabsController.php",
-		"/home/adrian/adrian/fairsens/www_v2/themes/default/mobile/authentication-create-account.tpl",
-		"/home/adrian/adrian/fairsens/www_v2/admin/themes/default/template/controllers/attachments/list_action_delete.tpl",
-		"/home/adrian/adrian/fairsens/www_v2/admin/themes/default/template/helpers/list/list_action_supplier_order_receipt.tpl"
+		"/home/adrian/adrian/fairsens/www_v2/classes/stock/StockManagerModule.php"
 	],
 	"find":
 	{
@@ -231,7 +227,7 @@
 	},
 	"find_in_files":
 	{
-		"height": 93.0,
+		"height": 0.0,
 		"where_history":
 		[
 			"/home/adrian/adrian/closop/app",
@@ -273,6 +269,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"’",
+			"‘",
 			"\n",
 			"public",
 			"wood2.jpg",
@@ -393,6 +391,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			"'"
 		],
 		"reverse": false,
 		"show_context": true,
@@ -443,10 +442,9 @@
 	{
 		"height": 0.0
 	},
-	"project": "closopv2.sublime-project",
 	"replace":
 	{
-		"height": 48.0
+		"height": 64.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -633,44 +631,10 @@
 		],
 		"width": 380.0
 	},
-	"select_symbol":
-	{
-		"height": 54.0,
-		"selected_items":
-		[
-			[
-				"getPageLink",
-				"getPageLink"
-			],
-			[
-				"vaerre",
-				"move_area_search_replace"
-			],
-			[
-				"preg",
-				"pRegexp"
-			],
-			[
-				"Send",
-				"Send"
-			],
-			[
-				"send",
-				"Send"
-			]
-		],
-		"width": 485.0
-	},
-	"settings":
-	{
-	},
 	"show_minimap": true,
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
 	"side_bar_width": 248.0,
-	"status_bar_visible": true,
-	"template_settings":
-	{
-	}
+	"status_bar_visible": true
 }
