@@ -1,31 +1,32 @@
 @extends ('admin/layout')
 
+
 <?php
-$action    = 'Crear';        
+
+    if ($user->exists):
+        $form_data = array('route' => array('admin.users.update', $user->id_user), 'method' => 'PATCH');
+        $action    = 'Editar';
+    else:
+        $form_data = array('route' => 'admin.users.store', 'method' => 'POST');
+        $action    = 'Crear';        
+    endif;
 
 ?>
 
 
 @section ('title') {{ $action }} Usuarios @stop
 
-  @if ($errors->any())
-    <div class="alert alert-danger">
-      <button type="button" class="close" data-dismiss="alert">&times;</button>
-      <strong>Por favor corrige los siguentes errores:</strong>
-      <ul>
-      @foreach ($errors->all() as $error)
-        <li>{{ $error }}</li>
-      @endforeach
-      </ul>
-    </div>
-  @endif
-
 @section ('content')
 
   <h1>{{ $action }} Usuarios</h1>
-  
-  {{-- Reemplazamos Form::open por Form::model: --}}
-  {{ Form::model($user, array('route' => 'admin.users.store', 'method' => 'POST'), array('role' => 'form')) }}
+
+  <p>
+    <a href="{{ route('admin.users.index') }}" class="btn btn-info">Lista de usuarios</a>
+  </p>
+
+{{ Form::model($user, $form_data, array('role' => 'form')) }}
+
+  @include ('admin/errors', array('errors' => $errors))
   
   <div class="row">
     <div class="form-group col-md-8">
@@ -60,7 +61,6 @@ $action    = 'Crear';
     </div>
     <div class="form-group col-md-4">
       {{ Form::label('rank', 'Rango') }}
-
       {{ Form::select('rank', array('client' => 'Cliente', 'owner' => 'Propietario'), 'client', array('class' => 'form-control')); }}
     </div>
   </div>
@@ -68,6 +68,12 @@ $action    = 'Crear';
   {{ Form::button($action . ' usuario', array('type' => 'submit', 'class' => 'btn btn-primary')) }} 
     <a href="{{ route('admin.users.index') }}" class="btn btn-primary">Volver a la lista de usuarios</a>
   </p>
+
+  
 {{ Form::close() }}
 
 @stop
+
+
+
+

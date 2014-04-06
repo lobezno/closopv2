@@ -44,7 +44,7 @@ class Admin_UsersController extends \BaseController {
         // Guardamos el usuario
         $user->save();
         // Y Devolvemos una redirección a la acción show para mostrar el usuario
-        return Redirect::route('admin.users.show', array($user->id));
+        return Redirect::route('admin.users.show', array($user->id_user));
     }
     else
     {
@@ -85,7 +85,7 @@ class Admin_UsersController extends \BaseController {
 		$user = User::find($id);
 		if (is_null ($user))
 		{
-		App::abort(404);
+		 App::abort(404);
 		}
 		return View::make('admin/users/form')->with('user', $user);
 	}
@@ -98,7 +98,33 @@ class Admin_UsersController extends \BaseController {
 	 */
 	public function update($id)
 	{
-		//
+		// Creamos un nuevo objeto para nuestro nuevo usuario
+    $user = User::find($id);   
+    // Si el usuario no existe entonces lanzamos un error 404 :(
+    if (is_null ($user))
+    {
+        App::abort(404);
+    }
+    
+    // Obtenemos la data enviada por el usuario
+    $data = Input::all();
+    
+    // Revisamos si la data es válido
+    if ($user->isValid($data))
+    {
+        // // Si la data es valida se la asignamos al usuario
+        // $user->fill($data);
+        // // Guardamos el usuario
+        // $user->save();
+        // // Y Devolvemos una redirección a la acción show para mostrar el usuario
+        // return Redirect::route('admin.users.show', array($user->id_user));
+    	return print("Weiiii");
+    }
+    // else
+    // {
+    //     // En caso de error regresa a la acción edit con los datos y los errores encontrados
+    //     return Redirect::route('admin.users.edit', $user->id_user)->withInput()->withErrors($user->errors);
+    // }
 	}
 
 	/**

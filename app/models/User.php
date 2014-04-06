@@ -56,24 +56,38 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 	public function isValid($data)
     {
         $rules = array(
-            'user'  => 'required|min:4|max:15|unique:users',
-            'password'  => 'required|min:7|confirmed',
-            'email'     => 'required|email|unique:users',
-            'fullname' => 'required|min:4|max:40',
-            'address'  => 'required|min:8',
-            'rank'  => 'required'
+        	'user'  => 'required|min:4|max:15|unique:users',
+	        'password'  => 'min:7|confirmed',
+	        'email'     => 'required|email|unique:users,email',
+	        'fullname' => 'required|min:4|max:40',
+	        'address'  => 'required|min:8',
+	        'rank'  => 'required'
         );
+
+     //    // Si el usuario existe:
+     //    if ($this->exists)
+     //    {
+     //      //Evitamos que la regla “unique” tome en cuenta el email del usuario actual
+					// $rules['email'] .= ',' . $this->id_user;
+     //    }
+     //    else // Si no existe...
+     //    {
+     //        // La clave es obligatoria:
+     //        $rules['password'] .= '|required';
+     //    }
         
-        $validator = Validator::make($data, $rules);
+     //    $validator = Validator::make($data, $rules);
         
-        if ($validator->passes())
-        {
-            return true;
-        }
+     //    if ($validator->passes())
+     //    {
+     //        return true;
+     //    }
         
-        $this->errors = $validator->errors();
+     //    $this->errors = $validator->errors();
         
-        return false;
+     //    return false;
     }
 
 }
+
+
