@@ -11,12 +11,14 @@
   
   <table class="table table-striped">
     <tr>
+        <th>Usuario</th>
         <th>Full name</th>
         <th>Email</th>
         <th></th>
     </tr>
 	@foreach ($users as $user)
     <tr>
+        <td>{{ $user->user }}</td>
         <td>{{ $user->fullname }}</td>
         <td>{{ $user->email }}</td>
 

@@ -61,7 +61,9 @@ class Admin_UsersController extends \BaseController {
 	 */
 	public function show($id)
 	{
-		//return View::make('admin/users/list');
+		$user = User::find($id);
+		return View::make('admin/users/profile')->with('user',$user);
+
 	}
 
 	/**
