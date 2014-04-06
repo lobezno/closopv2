@@ -9,7 +9,7 @@ class Admin_UsersController extends \BaseController {
 	 */
 	public function index()
 	{
-		$users = User::all();
+		$users = User::paginate();
     return View::make('admin/users/list')->with('users', $users);
 	}
 

@@ -28,6 +28,6 @@
     </tr>
     @endforeach
   </table>
- 
+ {{ $users->links() }}
 
 @stop
