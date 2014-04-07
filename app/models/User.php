@@ -6,15 +6,17 @@ use Illuminate\Auth\Reminders\RemindableInterface;
 class User extends Eloquent implements UserInterface, RemindableInterface {
 
 	public $errors;
+	protected $table = 'users';
 	protected $fillable = array('user','email', 'full_name', 'password','fullname','address','rank');
 	protected $primaryKey = 'id_user';
 	protected $perPage = 2;
+	
 	/**
 	 * The database table used by the model.
 	 *
 	 * @var string
 	 */
-	protected $table = 'users';
+	
 
 	/**
 	 * The attributes excluded from the model's JSON form.
@@ -64,29 +66,33 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 	        'rank'  => 'required'
         );
 
-     //    // Si el usuario existe:
-     //    if ($this->exists)
-     //    {
-     //      //Evitamos que la regla “unique” tome en cuenta el email del usuario actual
-					// $rules['email'] .= ',' . $this->id_user;
-     //    }
-     //    else // Si no existe...
-     //    {
-     //        // La clave es obligatoria:
-     //        $rules['password'] .= '|required';
-     //    }
+        // Si el usuario existe:
+        if ($this->exists)
+        {
+          //Evitamos que la regla “unique” tome en cuenta el email del usuario actual
+					$rules['email'] .= ',' . $this->id_user . ',id_user';
+        }
+        else // Si no existe...
+        {
+            // La clave es obligatoria:
+            $rules['password'] .= '|required';
+        }
+         $validator = Validator::make($data, $rules);
         
-     //    $validator = Validator::make($data, $rules);
+        if ($validator->passes())
+         {
+             return true;
+         }
         
-     //    if ($validator->passes())
-     //    {
-     //        return true;
-     //    }
+        $this->errors = $validator->errors();
         
-     //    $this->errors = $validator->errors();
-        
-     //    return false;
+        return false;
     }
+
+  public function getPrimaryKey()
+	{
+		return $this->primaryKey;
+	}
 
 }
 
